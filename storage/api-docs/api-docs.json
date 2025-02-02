@@ -8,12 +8,20 @@
             "email": "AbdallahHamadar@gmail.com"
         },
         "license": {
-            "name": "Developed by Osama Gasser",
+            "name": "Developed by Abdallah Hamada",
             "url": "https://example.com"
         },
         "version": "1.0.0"
     },
     "servers": [
+        {
+            "url": "https://1482-197-166-204-247.ngrok-free.app/api/",
+            "description": "HTTPS Server"
+        },
+        {
+            "url": "https://orientonline.info/api",
+            "description": "HTTPS Server"
+        },
         {
             "url": "http://127.0.0.1:8000/api",
             "description": "HTTP Server"
@@ -108,6 +116,22 @@
                                                     "The email field is required."
                                                 ]
                                             }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Internal server error"
                                         }
                                     },
                                     "type": "object"
@@ -210,6 +234,22 @@
                                 }
                             }
                         }
+                    },
+                    "500": {
+                        "description": "Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Internal server error"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -247,6 +287,22 @@
                                         "message": {
                                             "type": "string",
                                             "example": "Unauthenticated"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Internal server error"
                                         }
                                     },
                                     "type": "object"
@@ -306,6 +362,22 @@
                                         },
                                         "cart": {
                                             "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Internal server error"
                                         }
                                     },
                                     "type": "object"
@@ -377,6 +449,22 @@
                                 }
                             }
                         }
+                    },
+                    "500": {
+                        "description": "Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Internal server error"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
                     }
                 },
                 "security": [
@@ -420,6 +508,22 @@
                                 }
                             }
                         }
+                    },
+                    "500": {
+                        "description": "Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Internal server error"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
                     }
                 },
                 "security": [
@@ -454,6 +558,22 @@
                                 }
                             }
                         }
+                    },
+                    "500": {
+                        "description": "Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Internal server error"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
                     }
                 },
                 "security": [
@@ -480,6 +600,22 @@
                                         "message": {
                                             "type": "string",
                                             "example": "Cart cleared"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Internal server error"
                                         }
                                     },
                                     "type": "object"
@@ -534,6 +670,22 @@
                                 }
                             }
                         }
+                    },
+                    "500": {
+                        "description": "Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Internal server error"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
                     }
                 },
                 "security": [
@@ -562,6 +714,22 @@
                                             "items": {
                                                 "type": "object"
                                             }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Internal server error"
                                         }
                                     },
                                     "type": "object"
@@ -629,6 +797,22 @@
                                 }
                             }
                         }
+                    },
+                    "500": {
+                        "description": "Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Internal server error"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
                     }
                 },
                 "security": [
@@ -665,6 +849,22 @@
                                     "properties": {
                                         "category": {
                                             "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Internal server error"
                                         }
                                     },
                                     "type": "object"
@@ -743,6 +943,22 @@
                                 }
                             }
                         }
+                    },
+                    "500": {
+                        "description": "Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Internal server error"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
                     }
                 },
                 "security": [
@@ -782,6 +998,22 @@
                                         "message": {
                                             "type": "string",
                                             "example": "Category deleted successfully"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Internal server error"
                                         }
                                     },
                                     "type": "object"
@@ -876,6 +1108,22 @@
                                 }
                             }
                         }
+                    },
+                    "500": {
+                        "description": "Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Internal server error"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
                     }
                 },
                 "security": [
@@ -904,6 +1152,22 @@
                                             "items": {
                                                 "type": "object"
                                             }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Internal server error"
                                         }
                                     },
                                     "type": "object"
@@ -982,6 +1246,22 @@
                                 }
                             }
                         }
+                    },
+                    "500": {
+                        "description": "Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Internal server error"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
                     }
                 },
                 "security": [
@@ -1018,6 +1298,22 @@
                                     "properties": {
                                         "product": {
                                             "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Internal server error"
                                         }
                                     },
                                     "type": "object"
@@ -1107,6 +1403,22 @@
                                 }
                             }
                         }
+                    },
+                    "500": {
+                        "description": "Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Internal server error"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
                     }
                 },
                 "security": [
@@ -1148,6 +1460,22 @@
                                 }
                             }
                         }
+                    },
+                    "500": {
+                        "description": "Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Internal server error"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
                     }
                 },
                 "security": [
@@ -1157,13 +1485,14 @@
                 ]
             }
         },
-        "/user": {
+        "/api/user": {
             "get": {
                 "tags": [
                     "User"
                 ],
                 "summary": "Get authenticated user details",
-                "operationId": "f2a190df786c490b752271d58b074c9a",
+                "description": "Fetch the details of the currently authenticated user.",
+                "operationId": "dd48b9887ac0e98fac70ebd3da3eb645",
                 "responses": {
                     "200": {
                         "description": "User details retrieved successfully",
@@ -1172,8 +1501,14 @@
                                 "schema": {
                                     "properties": {
                                         "user": {
-                                            "description": "User details",
-                                            "type": "object"
+                                            "type": "object",
+                                            "example": {
+                                                "id": 1,
+                                                "name": "John Doe",
+                                                "email": "johndoe@example.com",
+                                                "phone": "123456789",
+                                                "address": "New York"
+                                            }
                                         }
                                     },
                                     "type": "object"
@@ -1182,14 +1517,17 @@
                         }
                     },
                     "401": {
-                        "description": "Unauthorized",
+                        "description": "Unauthorized"
+                    },
+                    "500": {
+                        "description": "Server Error",
                         "content": {
                             "application/json": {
                                 "schema": {
                                     "properties": {
-                                        "error": {
+                                        "message": {
                                             "type": "string",
-                                            "example": "Unauthorized"
+                                            "example": "Internal server error"
                                         }
                                     },
                                     "type": "object"
@@ -1200,18 +1538,19 @@
                 },
                 "security": [
                     {
-                        "Bearer": []
+                        "bearerAuth": []
                     }
                 ]
             }
         },
-        "/user/update": {
+        "/api/user/update": {
             "put": {
                 "tags": [
                     "User"
                 ],
-                "summary": "Update authenticated user profile",
-                "operationId": "826ea2571d5ba320c7868afd3d9bf0cb",
+                "summary": "Update user profile",
+                "description": "Update authenticated user's profile details.",
+                "operationId": "1d35d942ae63837e50bba38aba535212",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -1220,32 +1559,28 @@
                                 "properties": {
                                     "name": {
                                         "type": "string",
-                                        "maxLength": 255,
                                         "example": "John Doe"
                                     },
                                     "email": {
                                         "type": "string",
                                         "format": "email",
-                                        "example": "john@example.com"
+                                        "example": "johndoe@example.com"
                                     },
                                     "password": {
                                         "type": "string",
-                                        "minLength": 6,
-                                        "example": "newpassword"
+                                        "example": "password123"
                                     },
                                     "password_confirmation": {
                                         "type": "string",
-                                        "example": "newpassword"
+                                        "example": "password123"
                                     },
                                     "phone": {
                                         "type": "string",
-                                        "maxLength": 20,
-                                        "example": "+123456789"
+                                        "example": "123456789"
                                     },
                                     "address": {
                                         "type": "string",
-                                        "maxLength": 255,
-                                        "example": "123 Main Street"
+                                        "example": "New York"
                                     }
                                 },
                                 "type": "object"
@@ -1265,8 +1600,14 @@
                                             "example": "Profile updated successfully"
                                         },
                                         "user": {
-                                            "description": "Updated user details",
-                                            "type": "object"
+                                            "type": "object",
+                                            "example": {
+                                                "id": 1,
+                                                "name": "John Doe",
+                                                "email": "johndoe@example.com",
+                                                "phone": "123456789",
+                                                "address": "New York"
+                                            }
                                         }
                                     },
                                     "type": "object"
@@ -1274,31 +1615,18 @@
                             }
                         }
                     },
-                    "400": {
-                        "description": "Validation error",
+                    "422": {
+                        "description": "Validation error"
+                    },
+                    "500": {
+                        "description": "Server Error",
                         "content": {
                             "application/json": {
                                 "schema": {
                                     "properties": {
                                         "message": {
                                             "type": "string",
-                                            "example": "The email has already been taken."
-                                        }
-                                    },
-                                    "type": "object"
-                                }
-                            }
-                        }
-                    },
-                    "401": {
-                        "description": "Unauthorized",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "properties": {
-                                        "error": {
-                                            "type": "string",
-                                            "example": "Unauthorized"
+                                            "example": "Internal server error"
                                         }
                                     },
                                     "type": "object"
@@ -1309,7 +1637,7 @@
                 },
                 "security": [
                     {
-                        "Bearer": []
+                        "bearerAuth": []
                     }
                 ]
             }

@@ -46,6 +46,13 @@ class ImageController extends Controller
      *         @OA\JsonContent(
      *             @OA\Property(property="message", type="string", example="Unauthenticated.")
      *         )
+     *     ),
+     *     @OA\Response(
+     *         response=500,
+     *         description="Server Error",
+     *         @OA\JsonContent(
+     *             @OA\Property(property="message", type="string", example="Internal server error")
+     *         )
      *     )
      * )
      */

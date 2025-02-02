@@ -19,6 +19,13 @@ class CategoryController extends Controller
      *         @OA\JsonContent(
      *             @OA\Property(property="categories", type="array", @OA\Items(type="object"))
      *         )
+     *     ),
+     *     @OA\Response(
+     *         response=500,
+     *         description="Server Error",
+     *         @OA\JsonContent(
+     *             @OA\Property(property="message", type="string", example="Internal server error")
+     *         )
      *     )
      * )
      */
@@ -53,6 +60,13 @@ class CategoryController extends Controller
      *             @OA\Property(property="success", type="boolean", example=true),
      *             @OA\Property(property="message", type="string", example="Category created successfully"),
      *             @OA\Property(property="category", type="object")
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=500,
+     *         description="Server Error",
+     *         @OA\JsonContent(
+     *             @OA\Property(property="message", type="string", example="Internal server error")
      *         )
      *     )
      * )
@@ -104,6 +118,13 @@ class CategoryController extends Controller
      *         @OA\JsonContent(
      *             @OA\Property(property="category", type="object")
      *         )
+     *     ),
+     *     @OA\Response(
+     *         response=500,
+     *         description="Server Error",
+     *         @OA\JsonContent(
+     *             @OA\Property(property="message", type="string", example="Internal server error")
+     *         )
      *     )
      * )
      */
@@ -144,6 +165,13 @@ class CategoryController extends Controller
      *             @OA\Property(property="success", type="boolean", example=true),
      *             @OA\Property(property="message", type="string", example="Category updated successfully"),
      *             @OA\Property(property="category", type="object")
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=500,
+     *         description="Server Error",
+     *         @OA\JsonContent(
+     *             @OA\Property(property="message", type="string", example="Internal server error")
      *         )
      *     )
      * )
@@ -196,6 +224,13 @@ class CategoryController extends Controller
      *         @OA\JsonContent(
      *             @OA\Property(property="success", type="boolean", example=true),
      *             @OA\Property(property="message", type="string", example="Category deleted successfully")
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=500,
+     *         description="Server Error",
+     *         @OA\JsonContent(
+     *             @OA\Property(property="message", type="string", example="Internal server error")
      *         )
      *     )
      * )

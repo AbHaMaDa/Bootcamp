@@ -10,7 +10,34 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
-
+    /**
+     * @OA\Get(
+     *     path="/api/user",
+     *     summary="Get authenticated user details",
+     *     description="Fetch the details of the currently authenticated user.",
+     *     tags={"User"},
+     *     security={{"bearerAuth":{}}},
+     *     @OA\Response(
+     *         response=200,
+     *         description="User details retrieved successfully",
+     *         @OA\JsonContent(
+     *             type="object",
+     *             @OA\Property(property="user", type="object", example={"id":1, "name":"John Doe", "email":"johndoe@example.com", "phone":"123456789", "address":"New York"})
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=401,
+     *         description="Unauthorized"
+     *     ),
+     *     @OA\Response(
+     *         response=500,
+     *         description="Server Error",
+     *         @OA\JsonContent(
+     *             @OA\Property(property="message", type="string", example="Internal server error")
+     *         )
+     *     )
+     * )
+     */
     public function show()
     {
         $user = Auth::user();
@@ -24,7 +51,47 @@ class UserController extends Controller
         ], 200);
     }
 
-
+    /**
+     * @OA\Put(
+     *     path="/api/user/update",
+     *     summary="Update user profile",
+     *     description="Update authenticated user's profile details.",
+     *     tags={"User"},
+     *     security={{"bearerAuth":{}}},
+     *     @OA\RequestBody(
+     *         required=true,
+     *         @OA\JsonContent(
+     *             type="object",
+     *             @OA\Property(property="name", type="string", example="John Doe"),
+     *             @OA\Property(property="email", type="string", format="email", example="johndoe@example.com"),
+     *             @OA\Property(property="password", type="string", example="password123"),
+     *             @OA\Property(property="password_confirmation", type="string", example="password123"),
+     *             @OA\Property(property="phone", type="string", example="123456789"),
+     *             @OA\Property(property="address", type="string", example="New York")
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=200,
+     *         description="Profile updated successfully",
+     *         @OA\JsonContent(
+     *             type="object",
+     *             @OA\Property(property="message", type="string", example="Profile updated successfully"),
+     *             @OA\Property(property="user", type="object", example={"id":1, "name":"John Doe", "email":"johndoe@example.com", "phone":"123456789", "address":"New York"})
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=422,
+     *         description="Validation error"
+     *     ),
+     *     @OA\Response(
+     *         response=500,
+     *         description="Server Error",
+     *         @OA\JsonContent(
+     *             @OA\Property(property="message", type="string", example="Internal server error")
+     *         )
+     *     )
+     * )
+     */
     public function update(Request $request)
     {
         $user = Auth::user();
@@ -38,7 +105,6 @@ class UserController extends Controller
             'address' => 'nullable|string|max:255',
         ]);
 
-
         // Update user fields only if they are provided
         $user->update($request->only(['name', 'email', 'phone', 'address']));
 
@@ -46,8 +112,6 @@ class UserController extends Controller
         if ($request->filled('password')) {
             $user->password = Hash::make($request->password);
         }
-
-        // $user->save(); // This line is not needed as update() already saves the model
 
         return response()->json([
             'message' => 'Profile updated successfully',

@@ -46,6 +46,13 @@ class AuthController extends Controller
  *         @OA\JsonContent(
  *             @OA\Property(property="errors", type="object", example={"email": {"The email field is required."}})
  *         )
+ *     ),
+ *     @OA\Response(
+ *         response=500,
+ *         description="Server Error",
+ *         @OA\JsonContent(
+ *             @OA\Property(property="message", type="string", example="Internal server error")
+ *         )
  *     )
  * )
  */
@@ -55,7 +62,7 @@ class AuthController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8|confirmed',
-            'phone' => 'nullable|string|max:15',
+            'phone' => 'nullable|string|max:15|unique:users',
             'address' => 'nullable|string|max:255',
         ]);
 
@@ -109,6 +116,13 @@ class AuthController extends Controller
  *         @OA\JsonContent(
  *             @OA\Property(property="errors", type="object", example={"email": {"The email field is required."}})
  *         )
+ *     ),
+ *     @OA\Response(
+ *         response=500,
+ *         description="Server Error",
+ *         @OA\JsonContent(
+ *             @OA\Property(property="message", type="string", example="Internal server error")
+ *         )
  *     )
  * )
  */
@@ -158,6 +172,13 @@ class AuthController extends Controller
      *         description="Unauthorized",
      *         @OA\JsonContent(
      *             @OA\Property(property="message", type="string", example="Unauthenticated")
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=500,
+     *         description="Server Error",
+     *         @OA\JsonContent(
+     *             @OA\Property(property="message", type="string", example="Internal server error")
      *         )
      *     )
      * )

@@ -30,6 +30,13 @@ class CartController extends Controller
      *             @OA\Property(property="message", type="string", example="Product added to cart"),
      *             @OA\Property(property="cart", type="object")
      *         )
+     *     ),
+     *     @OA\Response(
+     *         response=500,
+     *         description="Server Error",
+     *         @OA\JsonContent(
+     *             @OA\Property(property="message", type="string", example="Internal server error")
+     *         )
      *     )
      * )
      */
@@ -77,6 +84,13 @@ class CartController extends Controller
      *             @OA\Property(property="message", type="string", example="Cart updated"),
      *             @OA\Property(property="cart", type="object")
      *         )
+     *     ),
+     *     @OA\Response(
+     *         response=500,
+     *         description="Server Error",
+     *         @OA\JsonContent(
+     *             @OA\Property(property="message", type="string", example="Internal server error")
+     *         )
      *     )
      * )
      */
@@ -112,6 +126,13 @@ class CartController extends Controller
      *         @OA\JsonContent(
      *             @OA\Property(property="message", type="string", example="Product removed from cart")
      *         )
+     *     ),
+     *     @OA\Response(
+     *         response=500,
+     *         description="Server Error",
+     *         @OA\JsonContent(
+     *             @OA\Property(property="message", type="string", example="Internal server error")
+     *         )
      *     )
      * )
      */
@@ -138,6 +159,13 @@ class CartController extends Controller
      *         @OA\JsonContent(
      *             @OA\Property(property="cart", type="array", @OA\Items(type="object"))
      *         )
+     *     ),
+     *     @OA\Response(
+     *         response=500,
+     *         description="Server Error",
+     *         @OA\JsonContent(
+     *             @OA\Property(property="message", type="string", example="Internal server error")
+     *         )
      *     )
      * )
      */
@@ -158,6 +186,13 @@ class CartController extends Controller
      *         description="Cart cleared",
      *         @OA\JsonContent(
      *             @OA\Property(property="message", type="string", example="Cart cleared")
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=500,
+     *         description="Server Error",
+     *         @OA\JsonContent(
+     *             @OA\Property(property="message", type="string", example="Internal server error")
      *         )
      *     )
      * )
@@ -186,6 +221,13 @@ class CartController extends Controller
      *         description="Cart is empty",
      *         @OA\JsonContent(
      *             @OA\Property(property="error", type="string", example="Cart is empty")
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=500,
+     *         description="Server Error",
+     *         @OA\JsonContent(
+     *             @OA\Property(property="message", type="string", example="Internal server error")
      *         )
      *     )
      * )

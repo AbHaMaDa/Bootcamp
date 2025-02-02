@@ -7,9 +7,20 @@ use Illuminate\Http\Request;
 /**
  * 
  * @OA\Server(
+ *     url="https://1482-197-166-204-247.ngrok-free.app/api/",
+ *     description="HTTPS Server"
+ * )
+ * 
+ * @OA\Server(
+ *     url="https://orientonline.info/api",
+ *     description="HTTPS Server"
+ * )
+ * 
+ * @OA\Server(
  *     url="http://127.0.0.1:8000/api",
  *     description="HTTP Server"
  * )
+ * 
  * 
  * @OA\SecurityScheme(
  *     securityScheme="Bearer",
@@ -29,7 +40,7 @@ use Illuminate\Http\Request;
  *         email="AbdallahHamadar@gmail.com"
  *     ),
  *     @OA\License(
- *         name="Developed by Osama Gasser",
+ *         name="Developed by Abdallah Hamada",
  *         url="https://example.com"
  *     )
  * )

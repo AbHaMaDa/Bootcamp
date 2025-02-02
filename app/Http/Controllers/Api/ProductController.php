@@ -19,6 +19,13 @@ class ProductController extends Controller
      *         @OA\JsonContent(
      *             @OA\Property(property="products", type="array", @OA\Items(type="object"))
      *         )
+     *     ),
+     *     @OA\Response(
+     *         response=500,
+     *         description="Server Error",
+     *         @OA\JsonContent(
+     *             @OA\Property(property="message", type="string", example="Internal server error")
+     *         )
      *     )
      * )
      */
@@ -54,6 +61,13 @@ class ProductController extends Controller
      *             @OA\Property(property="success", type="boolean", example=true),
      *             @OA\Property(property="message", type="string", example="Product created successfully"),
      *             @OA\Property(property="product", type="object")
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=500,
+     *         description="Server Error",
+     *         @OA\JsonContent(
+     *             @OA\Property(property="message", type="string", example="Internal server error")
      *         )
      *     )
      * )
@@ -108,6 +122,13 @@ class ProductController extends Controller
      *         @OA\JsonContent(
      *             @OA\Property(property="product", type="object")
      *         )
+     *     ),
+     *     @OA\Response(
+     *         response=500,
+     *         description="Server Error",
+     *         @OA\JsonContent(
+     *             @OA\Property(property="message", type="string", example="Internal server error")
+     *         )
      *     )
      * )
      */
@@ -149,6 +170,13 @@ class ProductController extends Controller
      *             @OA\Property(property="success", type="boolean", example=true),
      *             @OA\Property(property="message", type="string", example="Product updated successfully"),
      *             @OA\Property(property="product", type="object")
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=500,
+     *         description="Server Error",
+     *         @OA\JsonContent(
+     *             @OA\Property(property="message", type="string", example="Internal server error")
      *         )
      *     )
      * )
@@ -203,6 +231,13 @@ class ProductController extends Controller
      *         description="Product deleted successfully",
      *         @OA\JsonContent(
      *             @OA\Property(property="message", type="string", example="Product deleted successfully")
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=500,
+     *         description="Server Error",
+     *         @OA\JsonContent(
+     *             @OA\Property(property="message", type="string", example="Internal server error")
      *         )
      *     )
      * )
